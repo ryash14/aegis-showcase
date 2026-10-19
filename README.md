@@ -4,11 +4,23 @@ A captioned, synthetic-document walkthrough of the AEGIS research experience.
 
 The implementation repositories contain the parser, retrieval and validation details. This repository provides a shorter route through the user workflow: watch the demonstration, inspect its context, then follow the source links for implementation and limitations.
 
-[Quick start](#quick-start) · [How it works](#how-it-works) · [Development](#development) · [Contributing](CONTRIBUTING.md)
+[Preview](#application-preview) · [Quick start](#quick-start) · [Architecture](#architecture-and-request-flow) · [Development](#development) · [Contributing](CONTRIBUTING.md)
 
-![AEGIS demonstration preview](preview.png)
+## Application preview
 
-[Watch the walkthrough](demo.mp4) · [Read the captions](captions.vtt)
+![AEGIS synthetic-document review demonstration](preview.png)
+
+The recorded workflow compares invented controller revisions and exposes the evidence behind a finding.
+
+[Screenshot notes](docs/screenshots/README.md) · [Watch the walkthrough](demo.mp4)
+
+## Capabilities
+
+| Workflow | Result |
+|---|---|
+| Watch the workflow | Follow the captioned synthetic-document demonstration. |
+| Understand the review | See source comparison and human decision handling. |
+| Inspect implementation | Continue to the AEGIS source and operational documentation. |
 
 ## Quick start
 
@@ -24,13 +36,13 @@ python3 -m http.server 8080
 
 Open http://localhost:8080. This repository is a static demo; the retrieval and inference implementations live in the AEGIS project repositories. Synthetic demonstration results are not production benchmarks.
 
-## How it works
+## Architecture and request flow
 
 1. Serve the static directory and open the walkthrough page.
 2. Watch `demo.mp4` with the supplied WebVTT captions.
 3. Use the implementation links to inspect how the demonstrated workflow is built.
 
-### Design decisions
+### Engineering decisions
 
 The page, video, preview and captions are static assets. There is no model endpoint, backend process or application database in this repository. The recorded material uses synthetic documents; it does not establish production adoption or a measured accuracy result.
 
